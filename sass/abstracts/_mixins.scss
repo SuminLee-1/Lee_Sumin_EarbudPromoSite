@@ -49,3 +49,26 @@
           url('#{$file-path}.woff2') format('woff2')
       }
   }
+
+
+  // media quary
+
+//breakpoint
+
+@mixin tablet {
+      @media (min-width: #{$breakpoint-tablet}) {
+        @content;
+      }
+    }
+    
+    @mixin desktop {
+      @media (min-width: #{$breakpoint-desktop}) {
+        @content;
+      }
+    }
+    
+    @mixin largedesktop {
+          @media (min-width: #{$breakpoint-largeDesktop}) {
+            @content;
+          }
+        }
