@@ -169,6 +169,45 @@ model-viewer > #ar-prompt > img {
   animation: circle 4s linear infinite;
 }
 
+#main-header #global-nav {
+  height: 30px;
+}
+#main-header #global-nav #burger {
+  background: none;
+  border: none;
+  margin-top: 3px;
+  margin-left: 90%;
+}
+#main-header #global-nav #globalnav-con {
+  display: none;
+}
+#main-header #global-nav button.expanded {
+  position: absolute;
+  z-index: 100;
+}
+#main-header #global-nav #globalnav-con.slide-toggle {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: black;
+}
+#main-header #global-nav #globalnav-con ul li {
+  width: 25rem;
+  height: 3.125rem;
+  display: flex;
+  padding: 0.625rem 0 0.625rem 0;
+  margin-top: 3rem;
+  margin-left: 6.25rem;
+}
+#main-header #global-nav #globalnav-con ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .box1 {
   background-color: #acacac;
 }
