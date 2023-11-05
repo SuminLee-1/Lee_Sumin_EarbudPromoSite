@@ -3,6 +3,7 @@
 
 #main-header
    { #global-nav 
+
       {
 
       height: 30px;  
@@ -11,11 +12,16 @@
       background: none;
       border: none;
       margin-top: 3px;
-      margin-left: 90%;
+      margin-left: 92%;
       }
 
       #globalnav-con {
       display: none;
+      }
+
+      .main-logo {
+         margin-top: 10px;
+         margin-left: 10px;
       }
 
       button.expanded {
@@ -44,13 +50,58 @@
       margin-top: 3rem;
       margin-left: 6.25rem;
 
-         a {
-         color: #fff;
-         text-decoration: none;
-         }
 
       }
+
+      @include tablet{ 
+         #burger { 
+            margin-left: 95%;
+            }
+      }  
+
+      @include desktop{ 
+         #burger { 
+            display: none;
+            }
+         #globalnav-con {
+            display: block;
+            #global-header {
+               display: inline-flex;
+               justify-self: flex-end;
+               ul li {
+                  width: 100%;
+               }
+            }
+         }
+         
+      }  
    }
 
+   .localnav-con {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      padding: 5px;
+
+
+      .local-menu-items {
+         display: flex;
+         margin-left: 20%;
+         :first-child {
+            margin-right: 20px;
+         }
+      }
+
+      .local-button {
+         background-color: black;
+         padding: 5px;
+         padding-left: 10px;
+         padding-right: 10px;
+         margin-right: 10px;
+
+         border-radius: 10px;
+      }
+   }
 
 }
