@@ -5,7 +5,6 @@
    { #global-nav 
 
       {
-
       height: 30px;  
 
       #burger { 
@@ -13,6 +12,12 @@
       border: none;
       margin-top: 3px;
       margin-left: 92%;
+      cursor: pointer;
+
+      &:hover {
+         transition: all .3s ease-in-out;
+         color: #cfcfcf;
+      }
       }
 
       #globalnav-con {
@@ -63,15 +68,13 @@
          #burger { 
             display: none;
             }
+
+            #header-logo {
+               width: 100px;
+            }
+
          #globalnav-con {
             display: block;
-            #global-header {
-               display: inline-flex;
-               justify-self: flex-end;
-               ul li {
-                  width: 100%;
-               }
-            }
          }
          
       }  
@@ -90,7 +93,15 @@
          margin-left: 20%;
          :first-child {
             margin-right: 20px;
+            
          }
+
+         @include tablet{ 
+            margin-left: 160%;
+         }  
+         @include desktop{ 
+            margin-left: 320%;
+         }  
       }
 
       .local-button {

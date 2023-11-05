@@ -185,6 +185,11 @@ body {
   border: none;
   margin-top: 3px;
   margin-left: 92%;
+  cursor: pointer;
+}
+#main-header #global-nav #burger:hover {
+  transition: all 0.3s ease-in-out;
+  color: #cfcfcf;
 }
 #main-header #global-nav #globalnav-con {
   display: none;
@@ -224,15 +229,11 @@ body {
   #main-header #global-nav #burger {
     display: none;
   }
+  #main-header #global-nav #header-logo {
+    width: 100px;
+  }
   #main-header #global-nav #globalnav-con {
     display: block;
-  }
-  #main-header #global-nav #globalnav-con #global-header {
-    display: inline-flex;
-    justify-self: flex-end;
-  }
-  #main-header #global-nav #globalnav-con #global-header ul li {
-    width: 100%;
   }
 }
 #main-header .localnav-con {
@@ -248,6 +249,16 @@ body {
 #main-header .localnav-con .local-menu-items :first-child {
   margin-right: 20px;
 }
+@media (min-width: 744px) {
+  #main-header .localnav-con .local-menu-items {
+    margin-left: 160%;
+  }
+}
+@media (min-width: 1200px) {
+  #main-header .localnav-con .local-menu-items {
+    margin-left: 320%;
+  }
+}
 #main-header .localnav-con .local-button {
   background-color: black;
   padding: 5px;
@@ -255,6 +266,10 @@ body {
   padding-right: 10px;
   margin-right: 10px;
   border-radius: 10px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .box1 {
@@ -287,57 +302,57 @@ a:hover {
   text-align: center;
 }
 .section #hero-img {
-  height: 500px;
-  padding-top: 400px;
-  font-size: 30px;
+  height: 31.25rem;
+  padding-top: 25rem;
+  font-size: 1.875rem;
 }
 .section #value-props-text {
-  height: 200px;
-  padding-top: 100px;
+  height: 12.5rem;
+  padding-top: 6.25rem;
 }
 .section #mobile-table-view {
-  height: 400px;
-  padding: 50px;
+  height: 25rem;
+  padding: 3.125rem;
 }
 .section #sound-effect {
-  margin-top: 30px;
+  margin-top: 1.875rem;
 }
 .section #sound-effect-img {
-  border-radius: 0 100px 0 0;
-  margin: 20px;
-  padding: 100px;
-  height: 350px;
+  border-radius: 0 6.25rem 0 0;
+  margin: 1.25rem;
+  padding: 6.25rem;
+  height: 21.875rem;
 }
 .section #sound-effect-text {
-  margin: 20px;
-  padding: 100px;
-  height: 300px;
+  margin: 1.25rem;
+  padding: 6.25rem;
+  height: 21.875rem;
 }
 .section .mockups {
-  height: 300px;
-  margin: 20px;
-  padding: 150px;
+  height: 18.75rem;
+  margin: 1.25rem;
+  padding: 9.375rem;
   color: #cfcfcf;
 }
 .section #buds-color-img {
-  padding: 150px;
+  padding: 9.375rem;
   color: #cfcfcf;
-  height: 370px;
+  height: 23.125rem;
 }
 .section #buds-color-option ul {
   display: flex;
   align-items: flex-end;
   justify-content: space-evenly;
   color: #1f1f1f;
-  margin-top: 30px;
+  margin-top: 1.875rem;
 }
 .section #buds-color-option ul li {
-  height: 60px;
-  width: 60px;
+  height: 3.75rem;
+  width: 3.75rem;
   background-color: #8f8f8f;
-  border: #424242 3px solid;
-  border-radius: 40px;
-  padding: 10px;
+  border: #424242 0.1875rem solid;
+  border-radius: 2.5rem;
+  padding: 0.625rem;
   text-align: center;
 }
 .section #buds-color-option ul li:hover {
@@ -349,12 +364,19 @@ a:hover {
   justify-content: space-evenly;
 }
 .section .color-concept-imgs .c-concept-img {
-  height: 150px;
-  width: 130px;
-  margin-top: 30px;
+  height: 9.375rem;
+  width: 8.125rem;
+  margin-top: 1.875rem;
+}
+@media (min-width: 744px) {
+  .section .color-concept-imgs .c-concept-img {
+    width: 12rem;
+    height: 12rem;
+  }
 }
 .section #promo-reel {
-  height: 350px;
-  margin-top: 50px;
+  height: 21.875rem;
+  margin-top: 3.125rem;
+  padding: 10rem;
   color: #cfcfcf;
 }/*# sourceMappingURL=main.css.map */
