@@ -1,4 +1,6 @@
 // console.log("JS is Fire!");
+
+
 (function(){
 
 	let button = document.querySelector("#burger");
@@ -117,3 +119,5 @@
     hotspot.addEventListener("mouseout", hideInfo);
   });
 })();
+
+
