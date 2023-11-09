@@ -2,36 +2,55 @@
 @import '../abstracts/mixins.scss';
 
 #main-header
-   { #global-nav 
+{ #global-nav 
 
-      {
-      height: 30px;  
+   {
+      height: 50px; 
+      background-color: rgb(7, 7, 7); 
+      z-index: 100;
+      position: sticky;
 
-      #burger { 
+      #burger-con { 
+      height: 50px;  
+      position: absolute;
+      display: block;
+      padding-left: 90%;
+      z-index: 100;
+
       background: none;
       border: none;
-      margin-top: 3px;
-      margin-left: 92%;
       cursor: pointer;
 
       &:hover {
-         transition: all .3s ease-in-out;
-         color: #cfcfcf;
+         transition: all .2s ease-in-out;
+         color: #b8b8b8;
       }
+      #burger {
+         width: 30px;
+         height: 40px;
+         position: relative;
+         display: flex;
+         justify-content: center;
+      }
+      }
+
+      #header-logo {
+         width: 20px;
+         height: 30px;
+         position: absolute;
+         z-index: 100;
+         margin-top: 10px;
+         margin-left: 10px;
       }
 
       #globalnav-con {
       display: none;
       }
 
-      .main-logo {
-         margin-top: 10px;
-         margin-left: 10px;
-      }
 
       button.expanded {
       position: absolute;
-      z-index: 100;
+      z-index: 99;
       }
 
       #globalnav-con.slide-toggle {
@@ -43,7 +62,8 @@
       z-index: 10;
       top: 0;
       left: 0;
-      background-color: black;
+      margin-top: 50px;
+      background-color: rgb(18, 18, 18);
       }
 
       #globalnav-con ul li {
@@ -52,67 +72,100 @@
       display: flex;
       padding: 0.625rem 0 0.625rem 0;
    
-      margin-top: 3rem;
-      margin-left: 6.25rem;
-
+      margin-top: 4rem;
+      margin-left: 5rem;
+      
+      font-size: 16px;
 
       }
 
       @include tablet{ 
          #burger { 
-            margin-left: 95%;
+            margin-left: 90%;
             }
       }  
 
       @include desktop{ 
-         #burger { 
+
+         #header-logo {
+            margin-right: 30px;
+         }
+         #burger-con { 
             display: none;
             }
 
-            #header-logo {
-               width: 100px;
-            }
-
          #globalnav-con {
-            display: block;
+            display: inline;
+            position: relative;
          }
+
+         #globalnav-con ul {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+         }
+
+      #globalnav-con ul li {
+
+         padding: 0.25rem 0 0.2rem 0;
+         margin-top: 0px;
+         font-size: 13px;
+         }
+   
          
       }  
    }
 
+   #sticky-nav {
+      position: sticky;
+      background-color: #f3f3f387;
+      box-shadow: 5px 1px rgba(22,22,23,0.8);
+      
    .localnav-con {
       display: flex;
+
       justify-content: space-between;
       align-items: flex-end;
-
       padding: 5px;
 
+      #localnav-title {
+         margin-left: 5px;
+
+      }
 
       .local-menu-items {
          display: flex;
-         margin-left: 20%;
+
+         margin-left: calc(50px + max(100px,calc(env(safe-area-inset-right))));
+
+         a {
+            color: rgb(26, 26, 26);
+         }
          :first-child {
-            margin-right: 20px;
+            margin-right: 0px;
             
          }
 
          @include tablet{ 
-            margin-left: 160%;
+            margin-left: 100%;
          }  
          @include desktop{ 
-            margin-left: 320%;
+            margin-left: 200%;
          }  
       }
 
       .local-button {
-         background-color: black;
+         background-color: rgba(11, 11, 11, 0.879);
          padding: 5px;
          padding-left: 10px;
          padding-right: 10px;
-         margin-right: 10px;
+         margin-right: 5px;
+         margin-right: calc(20px + max(0px,calc(env(safe-area-inset-right) - 16px)));
 
-         border-radius: 10px;
+         border-radius: 12px;
+         font-size: 12px;
       }
    }
 
+}
 }
