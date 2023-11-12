@@ -1,0 +1,53 @@
+#outerShell {
+    display: none;
+}
+
+@media screen and ( min-width: 1200px) {
+
+    #mobile-table-view {
+        display: none;
+    }
+
+    #outerShell {
+        display: block;
+        max-width: 1200px;
+        border: solid 1px #000000;
+        margin: auto;
+    }
+    
+    #imageCon {
+        position: relative;
+        max-width: 1200px;
+        height: 100vh;
+    }
+    
+    .slideImage {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 100vh;
+    }
+    
+    .image-right {
+        background: url(../images/x-ray_v.1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+    
+    .image-left {
+        background: url(../images/earbuds.jpg) no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 50%;
+        background-attachment: fixed;
+    }
+    
+    .image-drag {
+        background-color: #000000;
+        left: 50%;
+        width: 4px;
+        cursor: pointer;
+    }
+}
+

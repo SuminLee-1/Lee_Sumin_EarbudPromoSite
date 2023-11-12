@@ -9,10 +9,17 @@
 		button.classList.toggle("expanded");
 	};
 
-	// let hamburgerMenu = () => {
-	// 	burgerCon.classList.toggle("slide-toggle");
-	// 	button.classList.toggle("expanded");
-	// };
 
-	button.addEventListener("click", hamburgerMenu, false);		
+
+	document.getElementById('burger-con').addEventListener('click', function() {
+		const burgerCon = document.getElementById('burger-con');
+		const globalNavCon = document.getElementById('globalnav-con');
+	 
+		burgerCon.classList.toggle('active');
+		globalNavCon.classList.toggle('active');
+	 });
+	 
+
+
+	 button.addEventListener("click", hamburgerMenu, false);		
 })();

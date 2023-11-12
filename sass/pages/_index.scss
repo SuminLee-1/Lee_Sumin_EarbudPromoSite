@@ -26,25 +26,38 @@ a {
    }
 }
 
+main {
+   background-color: #000000;
+   color: #f6f7fff8;
+}
+
 
 .section {
    text-align: center; 
    #hero-img {
-      height: 31.25rem;
-      padding-top: 25rem;
+      // height: 31.25rem;
 
       font-size: 1.875rem;
    }
+   #hero-title {
+      font-size: 50px;
+      font-weight: 700;
+   }
 
    #value-props-text {
-      height: 12.5rem;
-      padding-top: 6.25rem;
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+      padding: 20px;
+      text-align: center;
+
+      #value-t-1 {
+         font-size: 40px;
+      }
+      #value-t-2 {
+         font-size: 30px;
+      }
    }
 
-   #mobile-table-view {
-      height: 25rem;
-      padding: 3.125rem;
-   }
 
    #sound-effect {
       margin-top: 1.875rem;
@@ -53,27 +66,68 @@ a {
    #sound-effect-img {
       border-radius: 0 6.25rem 0 0;
       margin: 1.25rem;
-      padding: 6.25rem;
-      height: 21.875rem;
    }
    #sound-effect-text {
       margin: 1.25rem;
-      padding: 6.25rem;
+      padding: 3rem;
       height: 21.875rem;
+      & h4 {
+         font-size: 30px;
+         font-weight: 600;
+         margin-bottom: 20px;
+      }
    }
 
    .mockups {
-      height: 18.75rem;
       margin: 1.25rem;
-      padding: 9.375rem;
-
-      color: #cfcfcf;
    }
 
-   #buds-color-img {
-      padding: 9.375rem;
-      color: #cfcfcf;
-      height: 23.125rem;
+   #promo-value-props {
+      padding: 5rem;
+      line-height: 25px;
+
+      font-size: 20px;
+      
+   }
+
+   #mockUp-img-2 {
+      margin-bottom: 6rem;
+   }
+
+   #spec-noice-t, #inner-spec-t {
+      padding-left: 2rem;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+   }
+
+   #spec-noice-t h4 {
+      text-align: left;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 30px;
+   }
+
+   #spec-noice-t p {
+      text-align: left;
+      font-size: 13px;
+   }
+
+
+   #inner-spec-t h4{
+      text-align: left;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      }
+
+      #inner-spec-t p {
+         text-align: left;
+         font-size: 13px;
+      }
+   
+
+   #buds-ar {
+      height: 30rem;
    }
 
    #buds-color-option ul{
@@ -86,44 +140,43 @@ a {
 
 
       li {
-         height: 3.75rem;
-         width: 3.75rem;
-         background-color: #8f8f8f;
-         border: #424242 0.1875rem solid;
+         height: 4rem;
+         width: 4rem;
          border-radius: 2.5rem;
-         padding: 0.625rem;
+         padding-top: 1rem;
          text-align: center;
 
          &:hover {
             transition: all .2s ease-in-out;
-            background-color: #141414;
+            border: #424242 0.1875rem solid;
          }
       }
    }
 
-   .color-concept-imgs {
-      display: flex;
-      justify-content: space-evenly;
-
-      .c-concept-img {
-         height: 9.375rem;
-         width: 8.125rem;
-
-         margin-top: 1.875rem;
-
-         @include tablet {
-            width: 12rem;
-            height: 12rem;
-         }
-      }
+   #canvas {
+      margin-top: 100px;
    }
+
+   // .color-concept-imgs {
+   //    display: flex;
+   //    justify-content: space-evenly;
+
+   //    .c-concept-img {
+   //       height: 9.375rem;
+   //       width: 8.125rem;
+
+   //       margin-top: 1.875rem;
+
+   //       @include tablet {
+   //          width: 12rem;
+   //          height: 12rem;
+   //       }
+   //    }
+   // }
 
    #promo-reel {
-      height: 21.875rem;
       margin-top: 3.125rem;
-      padding: 10rem;
-
-      color: #cfcfcf;
+      margin-bottom: 100px;
    }
 
 }
