@@ -31,7 +31,14 @@
          position: relative;
          display: flex;
          justify-content: center;
+         transition: transform 0.3s ease; 
       }
+       }
+       
+       #burger-con.active #burger {
+         transform: rotate(90deg);
+       }
+       
       }
 
       #header-logo {
@@ -50,7 +57,8 @@
 
       button.expanded {
       position: absolute;
-      z-index: 99;
+      z-index: 99; 
+
       }
 
       #globalnav-con.slide-toggle {
@@ -66,6 +74,19 @@
       background-color: rgb(18, 18, 18);
       }
 
+      #globalnav-con.slide-toggle {
+         height: 0;
+         overflow: hidden;
+         transition: height 0.7s ease-in-out;
+       }
+       
+       #globalnav-con.slide-toggle.active {
+         height: 100vh;
+       }
+       
+
+      
+
       #globalnav-con ul li {
       width: 25rem;
       height: 3.125rem;
@@ -76,14 +97,14 @@
       margin-left: 5rem;
       
       font-size: 16px;
-
       }
 
       @include tablet{ 
          #burger { 
             margin-left: 90%;
             }
-      }  
+      }
+
 
       @include desktop{ 
 
@@ -91,7 +112,7 @@
             margin-right: 30px;
          }
          #burger-con { 
-            display: none;
+            display: none !important;
             }
 
          #globalnav-con {
@@ -117,9 +138,10 @@
    }
 
    #sticky-nav {
-      position: sticky;
-      background-color: #f3f3f387;
-      box-shadow: 5px 1px rgba(22,22,23,0.8);
+   position: sticky;
+   top: 0; 
+   background-color: #f3f3f3ab;
+   box-shadow: 5px 1px rgba(22,22,23,0.8);
       
    .localnav-con {
       display: flex;
@@ -160,7 +182,7 @@
          padding-left: 10px;
          padding-right: 10px;
          margin-right: 5px;
-         margin-right: calc(20px + max(0px,calc(env(safe-area-inset-right) - 16px)));
+         margin-right: calc(20px - max(10px,calc(env(safe-area-inset-right))));
 
          border-radius: 12px;
          font-size: 12px;
@@ -168,4 +190,4 @@
    }
 
 }
-}
+
