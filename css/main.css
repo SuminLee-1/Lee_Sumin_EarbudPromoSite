@@ -37,26 +37,28 @@ body {
     background: url(../images/earbuds.jpg) no-repeat;
     background-size: cover;
     background-position: center center;
-    width: 50%;
+    width: 70%;
     background-attachment: fixed;
   }
   .image-drag {
-    background-color: #000000;
-    left: 50%;
+    background-color: rgba(0, 0, 0, 0.7960784314);
+    left: 70%;
     width: 4px;
     cursor: pointer;
   }
 }
 model-viewer {
-  width: 100%;
+  width: 80%;
   height: 100%;
-  background-color: #ffffff;
+  background-color: rgba(213, 213, 213, 0.6901960784);
   margin-top: 30px;
   margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Hotspot {
-  background: url(../images/hotspot.svg) center no-repeat;
+  background: url(//images/hotspot.svg) center no-repeat;
   border: 0;
   box-sizing: border-box;
   cursor: pointer;
@@ -216,7 +218,7 @@ body {
 
 #main-header #global-nav {
   height: 50px;
-  background-color: rgb(7, 7, 7);
+  background-color: rgb(0, 0, 0);
   z-index: 100;
   position: sticky;
 }
@@ -259,10 +261,11 @@ body {
 #main-header button.expanded {
   position: absolute;
   z-index: 99;
+  transition: height 0.7s ease-in-out;
 }
 #main-header #globalnav-con.slide-toggle {
   display: block;
-  height: 100vh;
+  height: 0vh;
   width: 100vw;
   position: absolute;
   z-index: 10;
@@ -270,11 +273,7 @@ body {
   left: 0;
   margin-top: 50px;
   background-color: rgb(18, 18, 18);
-}
-#main-header #globalnav-con.slide-toggle {
-  height: 0;
   overflow: hidden;
-  transition: height 0.7s ease-in-out;
 }
 #main-header #globalnav-con.slide-toggle.active {
   height: 100vh;
@@ -283,10 +282,13 @@ body {
   width: 25rem;
   height: 3.125rem;
   display: flex;
-  padding: 0.625rem 0 0.625rem 0;
-  margin-top: 4rem;
+  margin-top: 3rem;
   margin-left: 5rem;
   font-size: 16px;
+}
+#main-header #globalnav-con ul li:hover {
+  transition: all 0.7s ease-in;
+  border-bottom: 1px solid #dadada;
 }
 @media (min-width: 744px) {
   #main-header #burger {
@@ -308,19 +310,24 @@ body {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
+    margin-left: 110px;
   }
   #main-header #globalnav-con ul li {
-    padding: 0.25rem 0 0.2rem 0;
+    padding: 0.25rem 0 0 0;
     margin-top: 0px;
-    font-size: 13px;
+    font-size: 14px;
+  }
+  #main-header:hover {
+    transition: all 0.7s ease-in;
+    border-bottom: 3px solid #ededed;
   }
 }
 
 #sticky-nav {
   position: sticky;
   top: 0;
-  background-color: rgba(243, 243, 243, 0.6705882353);
-  box-shadow: 5px 1px rgba(22, 22, 23, 0.8);
+  background-color: rgba(243, 243, 243, 0.8980392157);
+  box-shadow: 5px 1px rgba(225, 225, 225, 0.8);
 }
 #sticky-nav .localnav-con {
   display: flex;
@@ -330,26 +337,18 @@ body {
 }
 #sticky-nav .localnav-con #localnav-title {
   margin-left: 5px;
+  color: #090909;
 }
 #sticky-nav .localnav-con .local-menu-items {
   display: flex;
-  margin-left: calc(50px + max(100px, env(safe-area-inset-right)));
+  justify-content: space-around;
+  margin-left: calc(50px + max(200px, env(safe-area-inset-right)));
+}
+#sticky-nav .localnav-con .local-menu-items:last-child {
+  margin-left: 20px;
 }
 #sticky-nav .localnav-con .local-menu-items a {
-  color: rgb(26, 26, 26);
-}
-#sticky-nav .localnav-con .local-menu-items :first-child {
-  margin-right: 0px;
-}
-@media (min-width: 744px) {
-  #sticky-nav .localnav-con .local-menu-items {
-    margin-left: 100%;
-  }
-}
-@media (min-width: 1200px) {
-  #sticky-nav .localnav-con .local-menu-items {
-    margin-left: 200%;
-  }
+  color: rgb(20, 20, 20);
 }
 #sticky-nav .localnav-con .local-button {
   background-color: rgba(11, 11, 11, 0.879);
@@ -360,6 +359,19 @@ body {
   margin-right: calc(20px - max(10px, env(safe-area-inset-right)));
   border-radius: 12px;
   font-size: 12px;
+}
+@media (min-width: 1200px) {
+  #sticky-nav .localnav-con .local-button {
+    font-size: 14px;
+  }
+}
+#sticky-nav .localnav-con .local-button:hover {
+  transition: all 0.7s ease-in;
+  box-shadow: inset 0rem -3rem 0rem #fff;
+}
+#sticky-nav .localnav-con .local-button:hover a {
+  transition: all 0.7s ease-in;
+  color: #090909;
 }
 
 #main-footer {
@@ -388,22 +400,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.box1 {
-  background-color: #acacac;
-}
-
-.box2 {
-  background-color: #7e7e7e;
-}
-
-.box3 {
-  background-color: #3b3b3b;
-}
-
-.box4 {
-  background-color: #1f1f1f;
-}
-
 a {
   color: #fff;
   text-decoration: none;
@@ -414,7 +410,7 @@ a:hover {
   color: #cfcfcf;
 }
 
-main {
+body {
   background-color: #000000;
   color: rgba(246, 247, 255, 0.9725490196);
 }

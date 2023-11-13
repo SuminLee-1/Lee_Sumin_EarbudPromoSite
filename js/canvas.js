@@ -1,3 +1,50 @@
+// (() => {
+   
+//    const canvas2 = document.querySelector("#explode-view-2");
+//    const context = canvas2.getContext("2d");
+//    canvas2.width = 1200;
+//    canvas2.height = 1080;
+//    const frameCount = 121;
+//    const images = [];
+
+//    const buds2 =  {
+//       frame: 0
+//    }
+
+
+//    for (let i = 0; i < frameCount; i++) {
+//       // console.log(i);
+//       const img = new Image();
+
+
+//       img.src = `images/buds${(i).toString().padStart(3, '0')}.jpg`;
+//       images.push(img);
+//    }
+
+//    gsap.to(buds2, {
+//       frame: 121,
+//       snap: "frame",
+//       scrollTrigger: {
+//          trigger: "#explode-view-2", 
+//          pin: true,
+//          scrub: 1,
+//          // markers: true,
+//          start: "top"
+//       },
+
+//       onUpdate: render
+//    })
+
+//    images[0].addEventListener("onload", render);
+
+//    function render() {
+//       context.clearRect(0, 0, canvas2.width, canvas2.height);
+//       context.drawImage(images[buds2.frame], 0, 0);
+
+//    }
+
+// })();
+
 (() => {
    
    const canvas = document.querySelector("#explode-view");
@@ -28,8 +75,8 @@
          trigger: "#explode-view", 
          pin: true,
          scrub: 1,
-         markers: true,
-         start: "middle top"
+         // markers: true,
+         start: "top"
       },
 
       onUpdate: render
@@ -44,3 +91,5 @@
    }
 
 })();
+
+

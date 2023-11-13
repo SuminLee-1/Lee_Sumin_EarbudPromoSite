@@ -6,7 +6,7 @@
 
    {
       height: 50px; 
-      background-color: rgb(7, 7, 7); 
+      background-color: rgb(0, 0, 0); 
       z-index: 100;
       position: sticky;
 
@@ -58,13 +58,14 @@
       button.expanded {
       position: absolute;
       z-index: 99; 
+      transition: height 0.7s ease-in-out;
 
       }
 
       #globalnav-con.slide-toggle {
       display: block;
    
-      height: 100vh;
+      height: 0vh;
       width: 100vw;
       position: absolute;
       z-index: 10;
@@ -72,18 +73,14 @@
       left: 0;
       margin-top: 50px;
       background-color: rgb(18, 18, 18);
+      overflow: hidden;
       }
 
-      #globalnav-con.slide-toggle {
-         height: 0;
-         overflow: hidden;
-         transition: height 0.7s ease-in-out;
-       }
        
        #globalnav-con.slide-toggle.active {
          height: 100vh;
        }
-       
+
 
       
 
@@ -91,12 +88,17 @@
       width: 25rem;
       height: 3.125rem;
       display: flex;
-      padding: 0.625rem 0 0.625rem 0;
    
-      margin-top: 4rem;
+   
+      margin-top: 3rem;
       margin-left: 5rem;
       
       font-size: 16px;
+
+      &:hover {
+         transition:all .7s ease-in;
+         border-bottom: 1px solid #dadada;
+      }
       }
 
       @include tablet{ 
@@ -124,24 +126,28 @@
             display: flex;
             justify-content: space-around;
             margin-top: 20px;
+            margin-left: 110px;
          }
 
       #globalnav-con ul li {
 
-         padding: 0.25rem 0 0.2rem 0;
+         padding: 0.25rem 0 0  0;
          margin-top: 0px;
-         font-size: 13px;
+         font-size: 14px;
          }
    
-         
+         &:hover {
+            transition:all .7s ease-in;
+            border-bottom: 3px solid #ededed;
+         }
       }  
    }
 
    #sticky-nav {
    position: sticky;
    top: 0; 
-   background-color: #f3f3f3ab;
-   box-shadow: 5px 1px rgba(22,22,23,0.8);
+   background-color: #f3f3f3e5;
+   box-shadow: 5px 1px rgba(225, 225, 225, 0.8);
       
    .localnav-con {
       display: flex;
@@ -152,28 +158,21 @@
 
       #localnav-title {
          margin-left: 5px;
-
+         color: #090909;
       }
 
-      .local-menu-items {
+      .local-menu-items{
          display: flex;
+         justify-content: space-around;
 
-         margin-left: calc(50px + max(100px,calc(env(safe-area-inset-right))));
+         margin-left: calc(50px + max(200px,calc(env(safe-area-inset-right))));
 
+         &:last-child {
+            margin-left: 20px;
+         }
          a {
-            color: rgb(26, 26, 26);
+            color: rgb(20, 20, 20);
          }
-         :first-child {
-            margin-right: 0px;
-            
-         }
-
-         @include tablet{ 
-            margin-left: 100%;
-         }  
-         @include desktop{ 
-            margin-left: 200%;
-         }  
       }
 
       .local-button {
@@ -186,6 +185,19 @@
 
          border-radius: 12px;
          font-size: 12px;
+
+         @include desktop {
+            font-size: 14px;
+         }
+
+         &:hover {
+            transition:all .7s ease-in;
+            box-shadow: inset 0rem -3rem 0rem #fff;
+            a {
+               transition:all .7s ease-in;
+               color: #090909;
+            }
+         }
       }
    }
 

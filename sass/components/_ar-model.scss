@@ -4,16 +4,18 @@
 
  
  model-viewer {
-   width: 100%;
+   width: 80%;
    height: 100%;
-   background-color: #ffffff;
+   background-color: #d5d5d5b0;
 
    margin-top: 30px;
    margin-bottom: 50px;
+   margin-left: auto;
+   margin-right: auto;
  }
  
  .Hotspot {
-   background: url(../images/hotspot.svg) center no-repeat;
+   background: url(//images/hotspot.svg) center no-repeat;
    border: 0;
    box-sizing: border-box;
    cursor: pointer;

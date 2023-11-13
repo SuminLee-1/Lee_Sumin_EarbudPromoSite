@@ -1,5 +1,16 @@
 // console.log("JS is Fire!");
 
+gsap.registerPlugin(ScrollSmoother);
+
+// create the scrollSmoother before your scrollTriggers
+let smoother = ScrollSmoother.create({
+  wrapper: "#smooth-wrapper",
+  content: "#smooth-content",
+  smooth: 1,
+  effects: true,
+});
+
+console.log(smoother);
 
 
 (() => {
