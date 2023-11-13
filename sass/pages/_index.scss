@@ -2,18 +2,6 @@
 @import"../abstracts/variables.scss";
 @import '../abstracts/mixins.scss';
 
-.box1 {
-   background-color: #acacac;
-}
-.box2 {
-   background-color: #7e7e7e;
-}
-.box3 {
-   background-color: #3b3b3b;
-}
-.box4 {
-   background-color: #1f1f1f;
-}
 
 a {
    color: #fff;
@@ -26,7 +14,7 @@ a {
    }
 }
 
-main {
+body {
    background-color: #000000;
    color: #f6f7fff8;
 }
