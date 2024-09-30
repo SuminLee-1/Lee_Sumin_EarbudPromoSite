@@ -12,6 +12,7 @@
 
 // console.log(smoother);
 
+
 (() => {
 
   const model = document.querySelector("#model");

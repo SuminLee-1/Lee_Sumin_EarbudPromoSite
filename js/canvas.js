@@ -45,6 +45,10 @@
 
 // })();
 
+
+
+gsap.registerPlugin(ScrollTrigger);
+
 (() => {
    
    const canvas = document.querySelector("#explode-view");
@@ -76,7 +80,7 @@
          pin: true,
          scrub: 1,
          // markers: true,
-         start: "top"
+         start: "center"
       },
 
       onUpdate: render
