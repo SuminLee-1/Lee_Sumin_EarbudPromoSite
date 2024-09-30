@@ -1,0 +1,20 @@
+<model-viewer src="earbuds-blue.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.jpeg" shadow-intensity="1" environment-image="aircraft_workshop_01_1k.hdr" exposure="0.72">
+    <button class="Hotspot" slot="hotspot-1" data-position="0.664181814285334m 2.0200984187186934m -1.1113468823857462m" data-normal="0.04980544635578704m 0.4453154072358186m 0.8939874750754052m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Volume Controller</div>
+    </button><button class="Hotspot" slot="hotspot-2" data-position="0.33585510797022783m 1.34475044825676m -3.3221555767754696m" data-normal="-0.22063928188085408m -0.093281344887494m 0.9708845956070585m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Wear detection Sensor</div>
+    </button><button class="Hotspot" slot="hotspot-3" data-position="0.40773707572278006m -0.23398044288308054m -3.6945500948715737m" data-normal="0.9352783382384914m -0.04529846160410568m -0.351002107398442m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Replaceable Silicon</div>
+    </button><button class="Hotspot" slot="hotspot-4" data-position="-1.112226676954751m 1.0535284369799218m -1.5614173358784584m" data-normal="0.1640895789565011m 0.08967781696220357m -0.9823606767490094m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Microphone</div>
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>

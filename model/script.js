@@ -1,7 +1,4 @@
 // Handles loading the events for <model-viewer>'s slotted progress bar
-
-// console.log("JS is Fire!");
-
 const onProgress = (event) => {
   const progressBar = event.target.querySelector('.progress-bar');
   const updatingBar = event.target.querySelector('.update-bar');
